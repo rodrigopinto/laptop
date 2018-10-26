@@ -109,39 +109,7 @@ fi
 
 fancy_echo "Updating Homebrew formulae ..."
 brew update --force # https://github.com/Homebrew/brew/issues/1151
-brew bundle --file=- <<EOF
-tap "homebrew/services"
-tap "universal-ctags/universal-ctags"
-tap "caskroom/cask"
-
-# Unix
-brew "ack"
-brew "universal-ctags", args: ["HEAD"]
-brew "git"
-brew "openssl"
-brew "vim"
-brew "zsh"
-
-# Heroku
-brew "heroku"
-
-# Image manipulation
-brew "imagemagick"
-
-# Testing
-brew "qt@5.5" if MacOS::Xcode.installed?
-
-# Programming language prerequisites and package managers
-brew "libyaml" # should come after openssl
-brew "coreutils"
-brew "yarn"
-
-cask "gpg-suite"
-cask "postgres"
-
-# Databases
-brew "redis", restart_service: :changed
-EOF
+brew bundle --file=$HOME/Brewfile
 
 if brew list | grep --silent "qt@5.5"; then
   fancy_echo "Symlink qmake binary to /usr/local/bin for Capybara Webkit..."
