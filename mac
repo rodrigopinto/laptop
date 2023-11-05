@@ -169,3 +169,9 @@ if [ -f "$HOME/.laptop.local" ]; then
   # shellcheck disable=SC1091
   . "$HOME/.laptop.local"
 fi
+
+if [ ! -d ~/.oh-my-zsh ]; then
+	fancy_echo "Installing oh-my-zsh ..."
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
