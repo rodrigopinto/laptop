@@ -7,17 +7,19 @@ It can be run multiple times on the same machine safely.
 It installs, upgrades, or skips packages
 based on what is already installed on the machine.
 
+This is a personal fork of [thoughtbot/laptop](https://github.com/thoughtbot/laptop),
+adapted for my own setup.
+
 Requirements
 ------------
 
 We support:
 
+* macOS Sequoia (15.x) on Apple Silicon and Intel
 * macOS Sonoma (14.x) on Apple Silicon and Intel
 * macOS Ventura (13.x) on Apple Silicon and Intel
-* macOS Monterey (12.x) on Apple Silicon and Intel
 
 Older versions may work but aren't regularly tested.
-Bug reports for older versions are welcome.
 
 Install
 -------
@@ -52,7 +54,7 @@ Debugging
 Your last Laptop run will be saved to `~/laptop.log`.
 Read through it to see if you can debug the issue yourself.
 If not, copy the lines where the script failed into a
-[new GitHub Issue](https://github.com/thoughtbot/laptop/issues/new) for us.
+[new GitHub Issue](https://github.com/rodrigopinto/laptop/issues/new) for us.
 Or, attach the whole log file as an attachment.
 
 What it sets up
@@ -88,7 +90,7 @@ Image tools:
 
 Programming languages, package managers, and configuration:
 
-* [asdf-vm] for managing programming language versions
+* [mise] for managing programming language versions
 * [Bundler] for managing Ruby libraries
 * [Node.js] and [npm], for running apps and installing JavaScript packages
 * [Ruby] stable for writing general-purpose code
@@ -99,7 +101,7 @@ Programming languages, package managers, and configuration:
 [ImageMagick]: http://www.imagemagick.org/
 [Node.js]: http://nodejs.org/
 [npm]: https://www.npmjs.org/
-[asdf-vm]: https://github.com/asdf-vm/asdf
+[mise]: https://mise.jdx.dev/
 [Ruby]: https://www.ruby-lang.org/en/
 [Yarn]: https://yarnpkg.com/en/
 [Rosetta 2]: https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation-environment
@@ -151,36 +153,26 @@ fi
 Write your customizations such that they can be run safely more than once.
 See the `mac` script for examples.
 
-Laptop functions such as `fancy_echo` and
-`gem_install_or_update`
+Laptop functions such as `fancy_echo`
 can be used in your `~/.laptop.local`.
-
-See the [wiki](https://github.com/thoughtbot/laptop/wiki)
-for more customization examples.
 
 Contributing
 ------------
 
 Thank you, [contributors]!
 
-[contributors]: https://github.com/thoughtbot/laptop/graphs/contributors
-
-By participating in this project,
-you agree to abide by the thoughtbot [code of conduct].
-
-[code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
+[contributors]: https://github.com/rodrigopinto/laptop/graphs/contributors
 
 Edit the `mac` file.
 Document in the `README.md` file.
 Update the `CHANGELOG`.
-Follow shell style guidelines by using [ShellCheck] and [Syntastic].
+Follow shell style guidelines by using [ShellCheck].
 
 ```sh
 brew install shellcheck
 ```
 
 [ShellCheck]: http://www.shellcheck.net/about.html
-[Syntastic]: https://github.com/scrooloose/syntastic
 
 ### Testing your changes
 
@@ -189,7 +181,7 @@ You can use the free and open source emulator [UTM].
 
 Tip: Make a fresh virtual machine with the installation of macOS completed and
 your user created and first launch complete. Then duplicate that machine to test
-the script each time on a fresh install thats ready to go.
+the script each time on a fresh install that's ready to go.
 
 [UTM]: https://mac.getutm.app
 
@@ -200,19 +192,7 @@ Laptop is © 2011-2023 thoughtbot, inc.
 It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
+This fork is maintained by [Rodrigo Pinto](https://github.com/rodrigopinto).
+Originally created by [thoughtbot](https://thoughtbot.com).
+
 [LICENSE]: LICENSE
-
-About thoughtbot
-----------------
-
-![thoughtbot](https://thoughtbot.com/brand_assets/93:44.svg)
-
-Laptop is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We are passionate about open source software.
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com?utm_source=github
