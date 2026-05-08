@@ -117,12 +117,15 @@ append_to_zshrc 'eval "$(mise activate zsh)"'
 
 fancy_echo "Installing latest Ruby ..."
 mise use --global ruby@latest
-gem update --system
+mise exec -- gem update --system
 number_of_cores=$(sysctl -n hw.ncpu)
-bundle config --global jobs $((number_of_cores - 1))
+mise exec -- bundle config --global jobs $((number_of_cores - 1))
 
 fancy_echo "Installing latest Node ..."
 mise use --global node@latest
+
+fancy_echo "Installing pi coding agent ..."
+mise exec -- npm install --global @earendil-works/pi-coding-agent
 
 if [ -f "$HOME/.laptop.local" ]; then
   fancy_echo "Running your customizations from ~/.laptop.local ..."

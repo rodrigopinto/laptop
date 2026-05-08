@@ -63,6 +63,7 @@ What it sets up
 macOS tools:
 
 * [Homebrew] for managing operating system libraries.
+* GUI applications including Alfred, Docker Desktop, Google Chrome, iTerm2, Rectangle, Slack, Spotify, Telegram, Visual Studio Code, and Zoom.
 
 [Homebrew]: http://brew.sh/
 
@@ -94,7 +95,7 @@ Programming languages, package managers, and configuration:
 * [Bundler] for managing Ruby libraries
 * [Node.js] and [npm], for running apps and installing JavaScript packages
 * [Ruby] stable for writing general-purpose code
-* [Yarn] for managing JavaScript packages
+* [pi] coding agent for local development assistance
 * [Rosetta 2] for running tools that are not supported in Apple silicon processors
 
 [Bundler]: http://bundler.io/
@@ -103,7 +104,7 @@ Programming languages, package managers, and configuration:
 [npm]: https://www.npmjs.org/
 [mise]: https://mise.jdx.dev/
 [Ruby]: https://www.ruby-lang.org/en/
-[Yarn]: https://yarnpkg.com/en/
+[pi]: https://www.npmjs.com/package/@earendil-works/pi-coding-agent
 [Rosetta 2]: https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation-environment
 
 It should take less than 15 minutes to install (depends on your machine).
