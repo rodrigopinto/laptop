@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Install pi coding agent.
 * Manage current Homebrew formulae, casks, and VS Code extensions from this machine, excluding Crystal and Yarn.
 
+### Changed
+
+* Replace iTerm2 with Ghostty as the default terminal emulator.
+
 ## 2023-10-03
 
 ### Added

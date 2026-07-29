@@ -63,7 +63,7 @@ What it sets up
 macOS tools:
 
 * [Homebrew] for managing operating system libraries.
-* GUI applications including Alfred, Docker Desktop, Google Chrome, iTerm2, Rectangle, Slack, Spotify, Telegram, Visual Studio Code, and Zoom.
+* GUI applications including Alfred, Docker Desktop, Google Chrome, Ghostty, Rectangle, Slack, Spotify, Telegram, Visual Studio Code, and Zoom.
 
 [Homebrew]: http://brew.sh/
 
